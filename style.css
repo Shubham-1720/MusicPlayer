@@ -110,7 +110,7 @@ nav ul li{
 }
 
 .songInfo img{
-    opacity: 1;
+    opacity: 0;
     transition: opacity 0.5s ease-in;
 
 }
