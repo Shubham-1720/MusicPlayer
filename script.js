@@ -82,15 +82,17 @@ Array.from(document.getElementsByClassName("songItemPlay")).forEach((element)=>{
         audioelement.src = `./songs/${songIndex}.mp3`;
         audioelement.currentTime = 0;
         audioelement.play();
-        
         masterplay.classList.remove("fa-play");
         masterplay.classList.add("fa-pause");
         gif.style.opacity = 1;
-        masterSongName.innerHTML = songs[songIndex-1].songName;}
+        masterSongName.innerHTML = songs[songIndex-1].songName;
+    }
         else if((parseInt(e.target.id) == songIndex)){
             audioelement.pause();
             e.target.classList.remove("fa-pause");
-            e.target.classList.add("fa-play")
+            e.target.classList.add("fa-play");
+            masterplay.classList.remove("fa-pause");
+            masterplay.classList.add("fa-play");
             gif.style.opacity = 0;
         }
 
@@ -102,7 +104,6 @@ Array.from(document.getElementsByClassName("songItemPlay")).forEach((element)=>{
             audioelement.src = `./songs/${songIndex}.mp3`;
             audioelement.currentTime = 0;
             audioelement.play();
-            
             masterplay.classList.remove("fa-play");
             masterplay.classList.add("fa-pause");
             gif.style.opacity = 1;
